@@ -10,14 +10,16 @@
                 <svg class="filter-search-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </button>
         </label>
-        <button class="filter-region bg-element shadow-element rounded-md w-52 px-4 py-3 flex gap-3 justify-between relative" type="button" @click="collapseFilterRegion">
-            <span>{{filterRegion == 'All' ? 'Filter By Region' : filterRegion}}</span>
-            <svg v-if="isCollapsed" class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                <path d="M480-360 280-560h400L480-360Z"/>
-            </svg>
-            <svg v-else class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                <path d="m280-400 200-200 200 200H280Z"/>
-            </svg>
+        <div class="filter-region relative">
+            <button class="filter-region-btn bg-element shadow-element rounded-md w-52 px-4 py-3 flex gap-3 justify-between" type="button" @click="collapseFilterRegion">
+                <span>{{filterRegion == 'All' ? 'Filter By Region' : filterRegion}}</span>
+                <svg v-if="isCollapsed" class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path d="M480-360 280-560h400L480-360Z"/>
+                </svg>
+                <svg v-else class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path d="m280-400 200-200 200 200H280Z"/>
+                </svg>
+            </button>
             <div class="bg-element shadow-element rounded-md absolute w-full top-full left-0 translate-y-2 h-0 px-2 z-50 overflow-hidden transition-all" 
             :class="!isCollapsed && 'py-2 h-auto'">
                 <button v-for="region in regions" class="w-full text-left px-4 py-2 hover:opacity-60" :class="region == filterRegion && 'hidden'" type="button"
@@ -25,7 +27,7 @@
                     {{ region }}
                 </button>
             </div>
-        </button>
+        </div>
     </div>
 </template>
 
