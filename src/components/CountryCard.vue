@@ -1,5 +1,5 @@
 <template>
-    <RouterLink :to="`/country/${country.name.common}`"
+    <RouterLink :to="`/country/${country.name.common.replace(/\s/g, '%20')}`"
         class="country-card bg-element shadow-element rounded-md overflow-hidden aspect-4/5 hover:!scale-105"
         data-aos="flip-left" data-aos-once="true" data-aos-duration="300">
         <img class="country-card-flag w-full aspect-5/3 object-cover" :src="country.flags.svg"

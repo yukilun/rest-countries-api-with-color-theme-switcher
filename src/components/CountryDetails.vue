@@ -44,7 +44,7 @@
                 <p class="font-semibold whitespace-nowrap text-lg">Border Countries: </p>
                 <div class="flex-grow flex gap-3 flex-wrap">
                     <RouterLink v-for="countryCode in country.borders" :key="countryCode"
-                        :to="`/country/${getCountry(countryCode).name.common}`"
+                        :to="`/country/${getCountry(countryCode).name.common.replace(/\s/g, '%20')}`"
                         class="bg-element shadow-element px-5 py-1 rounded-sm transition-all duration-300 hover:scale-105">
                         {{ getCountry(countryCode).name.common }}
                     </RouterLink>
