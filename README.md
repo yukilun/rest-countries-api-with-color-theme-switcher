@@ -12,7 +12,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 - [Author](#author)
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -51,8 +50,8 @@ Users should be able to:
 ### What I learned
 
 - Transformed existing responsive web design into code
-- Utilized Vue + Vue router for single-page application (SPA) developement
-- Utilized Pinia for state management
+- Utilized Vue + Vue router for single-page application (SPA) development
+- Utilized Vue + Pinia for state management
 - Built theme switcher with Vue + Tailwind CSS
 - Used Fetch API to fetch data from REST countries API
 
